@@ -39,6 +39,13 @@ app.get("/pokemon", (req, res) => {
 // EDIT ROUTE -  GET request to /pokemon/:id/edit
 
 // SHOW ROUTE - GET request to /pokemon/:id
+app.get("/pokemon/:id", (req, res) => {
+
+    // getting id
+    const id = req.params.id
+    const pokemonShow = pokemon[id]
+    res.render("pokemon/show.ejs", {pokemonShow, id})
+})
 
 
 // server listener to turn our server
