@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %>
+</head>
+<body>
+    <%- include("../partials/header.ejs") %>
+
+    <div class="pokemon-container">
+    <% for (let i=0; i<pokemon.length; i++) { %>
+        <div class="pokemon">
+            <div class="pokemon-img">
+                <a href="/pokemon/<%= i %>">
+                    <img src="<%= pokemon[i].img %>" alt="pokemon image"/>
+                </a>
+            </div>
+            <div class="pokemon-name">
+                <%= pokemon[i].name %>
+            </div>
+        </div>
+
+    <% } %>
+    </div>      
+
+</body>
+</html>
