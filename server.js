@@ -49,11 +49,35 @@ app.delete("/pokemon/:id", (req, res) => {
 })
 
 // UPDATE ROUTE -  PUT request to /pokemon/:id
+app.put("/pokemon/:id", (req, res) => {
+    // get the id
+    const id = req.params.id
+    // get the body
+    const body = req.body
+    
+    // re-formatting the FORM data to what we have in models/pokemon.js
+    let updateFormData = {
+        name: req.body.name,
+        img: req.body.img,
+        type: req.body.type,
+        stats: {
+          hp: req.body.hp,
+          attack: req.body.attack,
+          defense: req.body.defense,
+          spattack: req.body.spattack,
+          spdefense: req.body.spdefense,
+          speed: req.body.spdefense,
+        }
+      }
+
+    req.body = updateFormData
+    pokemon[id] = req.body
+    // redirect back to the index page
+    res.redirect("/pokemon")
+})
 
 // CREATE ROUTE - POST request /pokemon
 app.post("/pokemon", (req, res) => {
-
-    console.log( req.body.type)
 
     // re-formatting the FORM data to what we have in models/pokemon.js
     let newFormData = {
@@ -76,6 +100,16 @@ app.post("/pokemon", (req, res) => {
 
 
 // EDIT ROUTE -  GET request to /pokemon/:id/edit
+app.get("/pokemon/:id/edit", (req, res) => {
+
+    // get id from the params
+    const id = req.params.id
+
+    // get the pokemon being updated
+    const pokemonEdit = pokemon[id]
+
+    res.render("pokemon/edit.ejs", {pokemonEdit, id} )
+})
 
 // SHOW ROUTE - GET request to /pokemon/:id
 app.get("/pokemon/:id", (req, res) => {

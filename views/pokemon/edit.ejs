@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %>
+</head>
+<body>
+    <body>
+        <div class="form-pokemon-heading">
+            <h1>Update <%= pokemonEdit.name %></h1>
+            <a href="/pokemon" class="back-to-index">Home</a>
+        </div>
+        
+
+        <form class="pokemon-form" action="/pokemon/<%= id %>?_method=PUT" method="post">
+            <fieldset>
+                <label>Name: <input type="text" name="name" value="<%= pokemonEdit.name %>" /></label>
+
+                <label>Image: <input type="text" name="img" value="<%= pokemonEdit.img %>" />
+                </label>
+
+                <label>Type: <input type="text" name="type" value="<%= pokemonEdit.type %>" /></label>
+
+                <label>HP: <input type="text" name="hp" value="<%= pokemonEdit.stats.hp %>" /></label>
+                <label>Attack: <input type="text" name="attack"  value="<%= pokemonEdit.stats.attack %>"/></label>
+                <label>Defense: <input type="text" name="defense" value="<%= pokemonEdit.stats.defense %>"/></label>
+                <label>Spattack: <input type="text" name="spattack" value="<%= pokemonEdit.stats.spattack %>" /></label>
+                <label>Spdefense: <input type="text" name="spdefense" value="<%= pokemonEdit.stats.spdefense %>" /></label>
+                <label>Speed: <input type="text" name="speed" value="<%= pokemonEdit.stats.speed %>" /></label>
+            </fieldset>
+            <input type="submit" value="Update Pokemon" >
+        </form>
+
+</body>
+</html>

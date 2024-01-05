@@ -97,7 +97,7 @@ nav a {
 
 /* NEW ROUTE */
 
-.new-pokemon-heading {
+.form-pokemon-heading {
     background-color: #646161;
     color: white;
     display: flex;
@@ -112,7 +112,7 @@ nav a {
     color: white;
     margin-right: 20px;
 }
-.pokemon-new-form {
+.pokemon-form {
     max-width: 600px;
     margin: 20px auto;
     padding: 20px;
@@ -123,18 +123,18 @@ nav a {
     color: #333;
 }
 
-.pokemon-new-form fieldset {
+.pokemon-form fieldset {
     border: none; /* remove fieldset default border */
 }
 
-.pokemon-new-form label {
+.pokemon-form label {
     display: block;
     margin-bottom: 10px;
     color: #233cb5;
     font-weight: bold;
 }
 
-.pokemon-new-form input[type="text"] {
+.pokemon-form input[type="text"] {
     width: 100%;
     padding: 8px 10px;  /* padding to increase the field height and width */
     margin-top: 5px;
@@ -142,7 +142,7 @@ nav a {
     border-radius: 4px;
 }
 
-.pokemon-new-form input[type="submit"] {
+.pokemon-form input[type="submit"] {
     width: 100%;
     padding: 10px;
     border: none;
@@ -153,6 +153,6 @@ nav a {
     font-size: 1em;
 }
 
-.pokemon-new-form input[type="submit"]:hover {
+.pokemon-form input[type="submit"]:hover {
     background-color: #228b22;
 }
