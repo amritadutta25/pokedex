@@ -31,6 +31,17 @@ app.get("/pokemon", (req, res) => {
 
 
 // DELETE ROUTE -  DELETE request to /pokemon/:id
+app.delete("/pokemon/:id", (req, res) => {
+    // get the id from params
+    const id = req.params.id
+
+    // then we'll splice it from the array
+    // arr.splice(index, numOfItemToCut)
+    pokemon.splice(id, 1)   // cut 1 item out from index=id
+
+    // redirect back to index
+    res.redirect("/pokemon")
+})
 
 // UPDATE ROUTE -  PUT request to /pokemon/:id
 

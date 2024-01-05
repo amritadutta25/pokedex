@@ -12,6 +12,12 @@
         <!-- Edit button -->
         <a href="/pokemon/<%= id %>/edit"><button>Edit</button></a>
 
+        <br>
+        <!-- Delete button -->
+        <form action="/pokemon/<%= id %>?_method=DELETE" method="POST">
+            <button>Delete</button>
+        </form>
+
         <div class="pokemon-show-img">
             <img src="<%= pokemonShow.img  %>" alt="pokemon image">
         </div>
