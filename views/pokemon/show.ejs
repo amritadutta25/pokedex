@@ -21,31 +21,38 @@
         <div class="pokemon-show-img">
             <img src="<%= pokemonShow.img  %>" alt="pokemon image">
         </div>
-        <h2>Type</h2>
-        <h3>
-            <ul>
-            <!-- if there are more than 1 type -->
-              <% if (Array.isArray(pokemonShow.type) && pokemonShow.type.length > 1) { %>
-                <% for( let i = 0; i < pokemonShow.type.length; i++) { %>
-                    <li><%= pokemonShow.type[i] %></li>
-                <% } %>
-                <!-- when there is only 1 type -->
-            <% } else { %>
-                <li><%= pokemonShow.type %></li>
-            <% } %>
-              
-              
-            </ul>
-        </h3>
-
-        <h2>Stats</h2>
-        <h3>
-            <ul>
-                <% for( let stat in pokemonShow.stats) {%>
-                <li><%= stat%>: <%= pokemonShow.stats[stat]%></li>
-                <% } %>
-            </ul>
-        </h3>
+        <div class="info">
+            <div class="type">
+                <h2>Type</h2>
+                <h3>
+                    <ul>
+                    <!-- if there are more than 1 type -->
+                    <% if (Array.isArray(pokemonShow.type) && pokemonShow.type.length > 1) { %>
+                        <% for( let i = 0; i < pokemonShow.type.length; i++) { %>
+                            <li><%= pokemonShow.type[i] %></li>
+                        <% } %>
+                        <!-- when there is only 1 type -->
+                    <% } else { %>
+                        <li><%= pokemonShow.type %></li>
+                    <% } %>
+                    
+                    
+                    </ul>
+                </h3>
+            </div>
+            
+            <div class="stats">
+                <h2>Stats</h2>
+                <h3>
+                    <ul>
+                        <% for( let stat in pokemonShow.stats) {%>
+                        <li><%= stat%>: <%= pokemonShow.stats[stat]%></li>
+                        <% } %>
+                    </ul>
+                </h3>
+            </div>
+        </div>
+        
 
     
     </div>      

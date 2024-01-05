@@ -67,33 +67,79 @@ nav a {
 /* SHOW ROUTE */
 
 .pokemon-show-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-.pokemon-show-container img {
-    margin-top: 5px;
-    border-radius: 20px;
+.pokemon-show-container h2, h3 {
+    color: #333;
 }
 
+.pokemon-show-img {
+    margin: 20px 0;
 
-.pokemon-show-container h2 {
-    margin-bottom: 2px;
-    text-decoration: underline;
 }
 
-.pokemon-show-container h3 {
-    margin-top: 2px;
+.pokemon-show-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    color: #555; 
+}
+
+.edit-button, .delete-button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 .edit-button {
-    background-color: rgb(53, 170, 53);
+    background-color: #1faa23;
+    color: white;
 }
 
 .delete-button {
-    background-color: rgb(224, 57, 57);
+    background-color: #e9271a;
+    color: white;
 }
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30%;
+}
+
+.type {
+    padding-right: 130px;
+}
+
+/* .stats {
+    padding-left: 0;
+} */
 
 /* NEW ROUTE */
 
