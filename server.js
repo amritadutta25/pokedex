@@ -51,6 +51,29 @@ app.delete("/pokemon/:id", (req, res) => {
 // UPDATE ROUTE -  PUT request to /pokemon/:id
 
 // CREATE ROUTE - POST request /pokemon
+app.post("/pokemon", (req, res) => {
+
+    console.log( req.body.type)
+
+    // re-formatting the FORM data to what we have in models/pokemon.js
+    let newFormData = {
+        name: req.body.name,
+        img: req.body.img,
+        type: req.body.type,
+        stats: {
+          hp: req.body.hp,
+          attack: req.body.attack,
+          defense: req.body.defense,
+          spattack: req.body.spattack,
+          spdefense: req.body.spdefense,
+          speed: req.body.spdefense,
+        }
+      }
+      req.body = newFormData
+      pokemon.push(req.body)
+      res.redirect("/pokemon")
+})
+
 
 // EDIT ROUTE -  GET request to /pokemon/:id/edit
 

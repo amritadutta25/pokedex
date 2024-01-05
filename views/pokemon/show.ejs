@@ -24,9 +24,19 @@
         <h2>Type</h2>
         <h3>
             <ul>
-              <% for( let i = 0; i < pokemonShow.type.length; i++) { %>
-              <li><%= pokemonShow.type[i]%></li>
-              <% } %>
+            <!-- if there are more than 1 type -->
+              <% if (Array.isArray(pokemonShow.type) && pokemonShow.type.length > 1) { %>
+                <% console.log("here more") %>
+                <% for( let i = 0; i < pokemonShow.type.length; i++) { %>
+                    <li><%= pokemonShow.type[i] %></li>
+                <% } %>
+                <!-- when there is only 1 type -->
+            <% } else { %>
+                <% console.log("here one") %>
+                <li><%= pokemonShow.type %></li>
+            <% } %>
+              
+              
             </ul>
         </h3>
 
