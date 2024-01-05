@@ -28,6 +28,11 @@ app.get("/pokemon", (req, res) => {
 })
 
 // NEW ROUTE - GET request to /pokemon/new
+app.get("/pokemon/new", (req, res) => {
+
+    // render a template with our form
+    res.render("pokemon/new.ejs")
+})
 
 
 // DELETE ROUTE -  DELETE request to /pokemon/:id

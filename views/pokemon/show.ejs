@@ -10,12 +10,12 @@
         <h2><%= pokemonShow.name %></h2>
 
         <!-- Edit button -->
-        <a href="/pokemon/<%= id %>/edit"><button>Edit</button></a>
+        <a href="/pokemon/<%= id %>/edit"><button class="edit-button">Edit</button></a>
 
         <br>
         <!-- Delete button -->
         <form action="/pokemon/<%= id %>?_method=DELETE" method="POST">
-            <button>Delete</button>
+            <button class="delete-button">Delete</button>
         </form>
 
         <div class="pokemon-show-img">

@@ -86,3 +86,73 @@ nav a {
 .pokemon-show-container h3 {
     margin-top: 2px;
 }
+
+.edit-button {
+    background-color: rgb(53, 170, 53);
+}
+
+.delete-button {
+    background-color: rgb(224, 57, 57);
+}
+
+/* NEW ROUTE */
+
+.new-pokemon-heading {
+    background-color: #646161;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2em;
+    justify-content: space-between;
+}
+
+.back-to-index {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+}
+.pokemon-new-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family:'Times New Roman', Times, serif;
+    color: #333;
+}
+
+.pokemon-new-form fieldset {
+    border: none; /* remove fieldset default border */
+}
+
+.pokemon-new-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #233cb5;
+    font-weight: bold;
+}
+
+.pokemon-new-form input[type="text"] {
+    width: 100%;
+    padding: 8px 10px;  /* padding to increase the field height and width */
+    margin-top: 5px;
+    border: 1px solid rgb(137, 133, 133);
+    border-radius: 4px;
+}
+
+.pokemon-new-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #32cd32;
+    color: white;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-size: 1em;
+}
+
+.pokemon-new-form input[type="submit"]:hover {
+    background-color: #228b22;
+}
